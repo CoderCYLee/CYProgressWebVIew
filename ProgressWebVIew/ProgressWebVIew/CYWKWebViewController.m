@@ -89,8 +89,7 @@
 {
     if (!_webView) {
         _webView = [[WKWebView alloc] initWithFrame:self.view.bounds];
-        [_webView addObserver:self forKeyPath:kProgressKey options:NSKeyValueObservingOptionNew context:nil];
-        
+        [_webView addObserver:self forKeyPath:kProgressKey options:NSKeyValueObservingOptionNew context:NULL];
         [_webView addObserver:self forKeyPath:kTitleKey options:NSKeyValueObservingOptionNew context:NULL];
     }
     return _webView;
